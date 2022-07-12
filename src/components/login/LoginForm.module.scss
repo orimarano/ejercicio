@@ -1,0 +1,52 @@
+.form {
+
+  width: 433px;
+  input {
+    &::-webkit-input-placeholder {
+      position: absolute;
+      margin-top: 18px;
+      color: #ffffff;
+    }
+    &::-moz-placeholder {
+      position: absolute;
+      margin-top: 18px;
+      color: #ffffff;
+    }
+    &:-ms-input-placeholder {
+      position: absolute;
+      margin-top: 18px;
+      color: #ffffff;
+    }
+    &::-ms-input-placeholder {
+      position: absolute;
+      margin-top: 18px;
+      color: #ffffff;
+    }
+    &::placeholder {
+      position: absolute;
+      margin-top: 18px;
+      color: #ffffff;
+    }
+  }
+}
+.input {
+  border: 1px solid #000000;
+  margin-top: 21px;
+  height: 50px;
+  background: none;
+  width: -webkit-fill-available;
+}
+.loginBtn {
+  margin-top: 53px;
+  height: 50px;
+  background: none;
+  font-size: medium;
+  width: 100%;
+  cursor: pointer;
+}
+.icon {
+  position: absolute;
+  margin-top: 30px;
+  margin-left: 20px;
+}
+
