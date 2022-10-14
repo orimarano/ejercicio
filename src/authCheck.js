@@ -12,7 +12,7 @@ export const ValidUserContextProvider = (props) => {
 
   async function apiAuthCheckHandler(enteredEmail, enteredPassword) {
     const url =
-      "https://802ss8lnr3.execute-api.us-east-1.amazonaws.com/prod/login";
+      "https://802ss8lnr3.execute-api.us-east-1.amazonaws.com/prod/users";
     await fetch(url, {mode:'cors'})
       .then((response) => {
         return response.json();
