@@ -12,18 +12,20 @@ export const ValidUserContextProvider = (props) => {
 
   async function apiAuthCheckHandler(enteredEmail, enteredPassword) {
     const url =
-      "https://802ss8lnr3.execute-api.us-east-1.amazonaws.com/prod/users";
-    await fetch(url, {mode:'no-cors'})
-      /*.then((response) => {
+      "https://802ss8lnr3.execute-api.us-east-1.amazonaws.com/prod/login";
+    await fetch(url, {mode:'cors'})
+      .then((response) => {
         return response.json();
-      })*/
+      })
       .then((data) => {
         //Old
         const validUsers = [];
-        for (const key in data) {
+
+        var users = data.body;
+        for (const key in users) {
           const validUser = {
             id: key,
-            ...data[key],
+            ...users[key],
           };
           validUsers.push(validUser);
         }
