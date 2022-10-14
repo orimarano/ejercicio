@@ -12,11 +12,11 @@ export const ValidUserContextProvider = (props) => {
 
   async function apiAuthCheckHandler(enteredEmail, enteredPassword) {
     const url =
-      "https://react-getting-started-aa01c-default-rtdb.firebaseio.com/seemsneat.json";
-    await fetch(url)
-      .then((response) => {
+      "https://802ss8lnr3.execute-api.us-east-1.amazonaws.com/prod/users";
+    await fetch(url, {mode:'no-cors'})
+      /*.then((response) => {
         return response.json();
-      })
+      })*/
       .then((data) => {
         //Old
         const validUsers = [];
@@ -29,7 +29,7 @@ export const ValidUserContextProvider = (props) => {
         }
         const authUser = validUsers.find(
           (user) =>
-            user.username === enteredEmail && user.password === enteredPassword
+            user.user === enteredEmail && user.password === enteredPassword
         );
         if (authUser !== undefined) {
           localStorage.setItem("login-data", JSON.stringify(authUser));
